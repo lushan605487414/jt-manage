@@ -3,7 +3,7 @@
 	xmlns="http://java.sun.com/xml/ns/javaee"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	id="jt-manage" version="2.5">
-	<display-name>jt-manage</display-name>
+	<display-name>jt-web</display-name>
 
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
@@ -30,7 +30,7 @@
 
 	<!-- 配置SpringMVC -->
 	<servlet>
-		<servlet-name>springmvc</servlet-name>
+		<servlet-name>springmvc-web</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<!-- 指定SpringMVC配置文件 -->
 		<init-param>
@@ -41,12 +41,8 @@
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>springmvc</servlet-name>
+		<servlet-name>springmvc-web</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-	
-	<welcome-file-list>
-		<welcome-file>index.jsp</welcome-file>
-	</welcome-file-list>
 
 </web-app>

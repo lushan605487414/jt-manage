@@ -25,4 +25,11 @@
 
 	<!-- 处理静态资源被“/”所拦截的问题 -->
 	<mvc:default-servlet-handler />
+	
+	<!-- 文件上传解析器，这个id的名称必须写死multipartResolver，源码按死名称访问  -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- 设置参数 10m=1024*1024*10，本质引用apache common fileupload 网页 -->
+		<property name="defaultEncoding" value="utf-8"/>
+		<property name="maxUploadSize" value="10245760"/>
+	</bean>
 </beans>
